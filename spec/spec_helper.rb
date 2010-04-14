@@ -28,6 +28,25 @@ def mysql_connection
   )
 end
 
+def oracle_connection
+  ActiveRecord::Base.establish_connection(
+    :adapter => 'oracle',
+    :database => 'vc1db1/ttdev1',
+    :username => 'spatial_adapter',
+    :password => 'spatial_adapter'
+  )
+end
+
+def oracle_enahnced_connection
+  ActiveRecord::Base.establish_connection(
+    :adapter => 'oracle_enahnced',
+    :database => 'vc1db1/ttdev1',
+    :username => 'spatial_adapter',
+    :password => 'spatial_adapter'
+  )
+end
+
+
 class GeometryFactory
   class << self
     def point

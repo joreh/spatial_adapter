@@ -5,12 +5,12 @@
 
 Gem::Specification.new do |s|
   s.name = %q{spatial_adapter}
-  s.version = "0.3.1"
+  s.version = "0.3.2"
 
   s.required_rubygems_version = Gem::Requirement.new(">= 0") if s.respond_to? :required_rubygems_version=
   s.authors = ["Pete Deffendol"]
   s.date = %q{2010-02-22}
-  s.description = %q{Provides enhancements to ActiveRecord to handle spatial datatypes in PostgreSQL and MySQL.}
+  s.description = %q{Provides enhancements to ActiveRecord to handle spatial datatypes in PostgreSQL, MySQL, and Oracle Spatial.}
   s.email = %q{pete@fragility.us}
   s.extra_rdoc_files = [
     "README.rdoc"
@@ -22,6 +22,7 @@ Gem::Specification.new do |s|
      "lib/spatial_adapter.rb",
      "lib/spatial_adapter/adapters/mysql.rb",
      "lib/spatial_adapter/adapters/postgis.rb",
+     "lib/spatial_adapter/adapters/oracle.rb",
      "lib/spatial_adapter/raw_geom_info.rb",
      "lib/spatial_adapter/schema_definitions.rb",
      "lib/spatial_adapter/schema_dumper.rb",
@@ -46,6 +47,7 @@ Gem::Specification.new do |s|
      "spec/postgis/migration_spec.rb",
      "spec/postgis/models_spec.rb",
      "spec/postgis/schema_dumper_spec.rb",
+     "spec/oracle/connection_adapter_spec.rb",
      "spec/spec_helper.rb",
      "spec/README.txt"
   ]
